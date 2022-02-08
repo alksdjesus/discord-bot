@@ -8,9 +8,26 @@ client.on('ready', () => {
 });
 
 client.on('message', msg => {
-    if (msg.content === 'Peng') {
-        msg.reply('<@&933200309109530684>');
+    msg.content = msg.content.toLowerCase();
+    if (msg.channel.id == 830095426601746542) {
+        //if (msg.content === '👀') {
+        if (msg.content.includes('👀') || msg.content.includes('valo?')) {
+            msg.reply('<@&933200309109530684>');
+        }
+    }
+    //var words = ["Peng", "peng", "PEng", "PeNg", "PenG", "PENg", "PENG", "pEng", "pENg", "pENG", "peNg", "peNG", "penG", "pEnG"]
+    /*for (var i = 0; i < words.length; i++) {
+        if (msg.content.includes(words[i])) {
+            msg.reply('<@!466825076688420885>');
+        }
+    }*/
+    if (msg.content.includes('peng')) {
+        msg.reply('PONG <@!466825076688420885>');
+        //msg.reply('<@!466825076688420885>');
+    }
+    if (msg.content.includes('dumbass')) {
+        msg.reply('<@!404472366853521410>');
     }
 });
 
-client.login('OTM5Nzc5ODk2NDYzNDYyNDIw.Yf90Ow.CrxQNz6avwDwQ1d6NHg2RMcO2_0');
+client.login(process.env.TOKEN);
