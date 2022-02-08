@@ -9,7 +9,7 @@ client.on('ready', () => {
 
 client.on('message', msg => {
     if (msg.content === 'Peng') {
-        msg.reply('@pabu');
+        msg.reply('<@&933200309109530684>');
     }
 });
 
