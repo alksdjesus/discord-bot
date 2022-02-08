@@ -17,12 +17,6 @@ client.on('message', msg => {
             msg.reply('<@&933200309109530684>');
         }
     }
-    //var words = ["Peng", "peng", "PEng", "PeNg", "PenG", "PENg", "PENG", "pEng", "pENg", "pENG", "peNg", "peNG", "penG", "pEnG"]
-    /*for (var i = 0; i < words.length; i++) {
-        if (msg.content.includes(words[i])) {
-            msg.reply('<@!466825076688420885>');
-        }
-    }*/
     if (msg.content.includes('peng')) {
         msg.reply('PONG <@!466825076688420885>');
         //msg.reply('<@!466825076688420885>');
