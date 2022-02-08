@@ -1,5 +1,7 @@
 //index.js file for discord bot
 
+const TOKEN = process.env['TOKEN'];
+const keepAlive = require("./server");
 const Discord = require('discord.js');
 const client = new Discord.Client({intents: ["GUILDS", "GUILD_MESSAGES"]});
 
@@ -30,4 +32,5 @@ client.on('message', msg => {
     }
 });
 
-client.login(process.env.TOKEN);
+keepAlive();
+client.login(TOKEN);
